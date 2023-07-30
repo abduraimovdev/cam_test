@@ -1,5 +1,4 @@
 import 'package:cam_test/screens/home_screen.dart';
-import 'package:cam_test/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 class CamApp extends StatelessWidget {
@@ -7,10 +6,13 @@ class CamApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  MaterialApp(
+      // darkTheme: ThemeData.dark(),
+      theme: ThemeData.light(useMaterial3: true),
+      themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
       // home: SplashScreen(),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
