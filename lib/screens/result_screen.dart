@@ -1,3 +1,5 @@
+import 'package:cam_test/core/constants/strings.dart';
+import 'package:cam_test/core/constants/styles.dart';
 import 'package:cam_test/screens/views/app_button.dart';
 import 'package:cam_test/screens/views/result_background.dart';
 import 'package:flutter/material.dart';
@@ -55,43 +57,41 @@ class ResultData extends StatelessWidget {
         children: [
           Expanded(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("ABITURIYENT : "),
+                const Text(Strings.abituriyent, style: Styles.resultStyles,),
                 Text(
                   "BOTIROV JASUR / PAXTAKOR / 11-MAKTAB",
-                  style: TextStyle(
-                    fontSize: 27,
-                  ),
+                  style: Styles.resultStyles.copyWith(fontSize: 27)
                 ),
               ],
             ),
           ),
+          const Divider(),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("ABITURIYENT : "),
+                const Text(Strings.abituriyent, style: Styles.resultStyles,),
                 Text(
-                  "BOTIROV JASUR / PAXTAKOR / 11-MAKTAB",
-                  style: TextStyle(
-                    fontSize: 27,
-                  ),
+                    "156,6",
+                    textAlign: TextAlign.center,
+                    style: Styles.resultStyles.copyWith(fontSize: 70)
                 ),
               ],
             ),
           ),
+          const Divider(),
           Expanded(
             flex: 2,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("ABITURIYENT : "),
+                const Text(Strings.abituriyent, style: Styles.resultStyles,),
                 Text(
-                  "BOTIROV JASUR / PAXTAKOR / 11-MAKTAB",
-                  style: TextStyle(
-                    fontSize: 27,
-                  ),
+                    "BOTIROV JASUR / PAXTAKOR / 11-MAKTAB",
+                    style: Styles.resultStyles.copyWith(fontSize: 27)
                 ),
               ],
             ),
