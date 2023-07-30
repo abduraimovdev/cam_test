@@ -17,9 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const homeBackgroundImage = "assets/images/home_background.png";
 
     int dropdownvalue = 1;
-
     List<int> items = [for (int i = 1; i <= 5; i++) i];
-
     return Scaffold(
       body: Stack(
         children: [
@@ -62,9 +60,13 @@ class _HomeScreenState extends State<HomeScreen> {
                           maxLines: 2,
                           minLines: 2,
                           decoration: InputDecoration(
+                            hintText: "Ma'lumot kiriting...",
+
+
+
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.all(
-                                Radius.circular(30),
+                                Radius.circular(20),
                               ),
                             ),
                           ),
@@ -126,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         onPressed: () {},
                         icon: const Icon(
                           CupertinoIcons.camera_fill,
-                          size: 50,
+                          size: 40,
                           shadows: [],
                         ),
                       ),
