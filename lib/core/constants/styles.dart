@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Styles {
   static const TextStyle textStyle = TextStyle(
-      fontSize: 24,
+      fontSize: 20,
       overflow: TextOverflow.ellipsis,
       fontWeight: FontWeight.bold);
 

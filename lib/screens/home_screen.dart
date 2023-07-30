@@ -30,73 +30,67 @@ class _HomeScreenState extends State<HomeScreen> {
               filterQuality: FilterQuality.high,
             ),
           ),
-          SizedBox(
-            height: size.height,
-            width: size.width,
+          Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
                   width: 350,
                   padding: const EdgeInsets.all(20),
-                  decoration:  BoxDecoration(
+                  decoration: BoxDecoration(
                     borderRadius: const BorderRadius.all(
                       Radius.circular(20),
                     ),
-                    border: Border.all(width: 1,color: Colors.black),
+                    border: Border.all(width: 1, color: Colors.black),
                     color: Colors.white,
                   ),
                   child: Column(
-                      children: [
-                        const Text(
-                          Strings.infoText,
-                          style: Styles.textStyle,
-                          maxLines: 2,
-                          textAlign: TextAlign.center,
-                        ),
-                        const SizedBox(height: 20),
-                        const TextField(
-                          maxLines: 2,
-                          minLines: 2,
-                          decoration: InputDecoration(
-                            hintText: "Ma'lumot kiriting...",
-
-
-
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(20),
-                              ),
+                    children: [
+                      const Text(
+                        Strings.infoText,
+                        style: Styles.textStyle,
+                        maxLines: 2,
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 20),
+                      const TextField(
+                        maxLines: 2,
+                        minLines: 2,
+                        decoration: InputDecoration(
+                          hintText: "Ma'lumot kiriting...",
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20),
                             ),
                           ),
                         ),
-                        const SizedBox(height: 20),
-
-                        const Text(
-                          Strings.testCodeText,
-                          style: Styles.textStyle,
-                          textAlign: TextAlign.center,
-                        ),
-                        DropdownButton(
-                          value: dropdownvalue,
-                          icon: const Icon(Icons.keyboard_arrow_down),
-                          items: items.map((int items) {
-                            return DropdownMenuItem(
-                              value: items,
-                              child: Text(items.toString()),
-                            );
-                          }).toList(),
-                          onChanged: (int? newValue) {
-                            setState(() {
+                      ),
+                      const SizedBox(height: 20),
+                      const Text(
+                        Strings.testCodeText,
+                        style: Styles.textStyle,
+                        textAlign: TextAlign.center,
+                      ),
+                      DropdownButton(
+                        value: dropdownvalue,
+                        icon: const Icon(Icons.keyboard_arrow_down),
+                        items: items.map((int items) {
+                          return DropdownMenuItem(
+                            value: items,
+                            child: Text(items.toString()),
+                          );
+                        }).toList(),
+                        onChanged: (int? newValue) {
+                          setState(
+                            () {
                               dropdownvalue = newValue!;
-                            });
-                          },
-                        ),
-                      ]),
+                            },
+                          );
+                        },
+                      ),
+                    ],
+                  ),
                 ),
-
-
               ],
             ),
           ),
@@ -138,7 +132,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           )
-
         ],
       ),
     );
