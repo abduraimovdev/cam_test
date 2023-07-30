@@ -1,3 +1,5 @@
+import 'package:cam_test/core/constants/strings.dart';
+import 'package:cam_test/core/constants/styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -13,20 +15,11 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     const homeBackgroundImage = "assets/images/home_background.png";
-    const String infoText = 'ABITURIYENT HAQIDA MA\'LUMOT';
-    // Initial Selected Value
-    String dropdownvalue = '1';
 
-    // List of items in our dropdown menu
-    var items = [
-      '1',
-      '2',
-      '3',
-      '4',
-      '5',
-    ];
-    TextStyle textStyle =
-        const TextStyle(fontSize: 24, overflow: TextOverflow.ellipsis,fontWeight: FontWeight.bold);
+    int dropdownvalue = 1;
+
+    List<int> items = [for (int i = 1; i <= 5; i++) i];
+
     return Scaffold(
       body: Stack(
         children: [
@@ -47,47 +40,52 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  // height: ,
                   width: 350,
-                  padding: const EdgeInsets.all(30),
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                      color: Colors.white),
-                  child:  Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  padding: const EdgeInsets.all(20),
+                  decoration:  BoxDecoration(
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(20),
+                    ),
+                    border: Border.all(width: 1,color: Colors.black),
+                    color: Colors.white,
+                  ),
+                  child: Column(
                       children: [
-                        Text(
-                          infoText,
-                          style: textStyle,
+                        const Text(
+                          Strings.infoText,
+                          style: Styles.textStyle,
                           maxLines: 2,
                           textAlign: TextAlign.center,
                         ),
+                        const SizedBox(height: 20),
                         const TextField(
                           maxLines: 2,
                           minLines: 2,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(30))),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(30),
+                              ),
+                            ),
                           ),
                         ),
-                        const SizedBox(height: 50),
-                        Text(
-                          "TEST KODI:",
-                          style: textStyle,
+                        const SizedBox(height: 20),
+
+                        const Text(
+                          Strings.testCodeText,
+                          style: Styles.textStyle,
                           textAlign: TextAlign.center,
                         ),
                         DropdownButton(
                           value: dropdownvalue,
                           icon: const Icon(Icons.keyboard_arrow_down),
-                          items: items.map((String items) {
+                          items: items.map((int items) {
                             return DropdownMenuItem(
                               value: items,
-                              child: Text(items),
+                              child: Text(items.toString()),
                             );
                           }).toList(),
-                          onChanged: (String? newValue) {
+                          onChanged: (int? newValue) {
                             setState(() {
                               dropdownvalue = newValue!;
                             });
@@ -96,51 +94,49 @@ class _HomeScreenState extends State<HomeScreen> {
                       ]),
                 ),
 
-                const SizedBox(
-                  height: 100,
-                ),
+
+              ],
+            ),
+          ),
+          SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     ElevatedButton(
-                      
+                      onPressed: () {},
+                      child: const Text(
+                        Strings.exitText,
+                        style: TextStyle(
+                            color: Colors.red,
+                            fontSize: 24,
+                            fontWeight: FontWeight.w900),
+                      ),
+                    ),
+                    Container(
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                        color: Colors.white,
+                      ),
+                      child: IconButton(
                         onPressed: () {},
-                        child: const Text(
-                          "CHIQISH",
-                          style: TextStyle(
-                              color: Colors.red,
-                              fontSize: 24,
-                              fontWeight: FontWeight.w900),
-                        ),),
-                    IconButton(onPressed: (){}, icon: const Icon(CupertinoIcons.camera_fill,size: 50,shadows: [
-                      BoxShadow(color: Colors.white,
-                        blurRadius: 10,
-                        offset: Offset(5, 5),
-                        
+                        icon: const Icon(
+                          CupertinoIcons.camera_fill,
+                          size: 50,
+                          shadows: [],
+                        ),
                       ),
-                      BoxShadow(color: Colors.white,
-                        blurRadius: 10,
-                        offset: Offset(-5, 5),
-
-                      ),
-                      BoxShadow(color: Colors.white,
-                        blurRadius: 10,
-                        offset: Offset(-5,- 5),
-
-                      ),
-                      BoxShadow(color: Colors.white,
-                        blurRadius: 10,
-                        offset: Offset(5,- 5),
-
-                      )
-                      
-                    ],))
-
+                    )
                   ],
                 )
               ],
             ),
           )
+
         ],
       ),
     );
