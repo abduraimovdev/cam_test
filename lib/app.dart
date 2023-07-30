@@ -1,3 +1,4 @@
+import 'package:cam_test/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 class CamApp extends StatelessWidget {
@@ -6,7 +7,7 @@ class CamApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ,
+      home: SplashScreen(),
     );
   }
 }
