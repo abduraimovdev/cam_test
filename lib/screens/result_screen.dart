@@ -60,10 +60,10 @@ class ResultData extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(Strings.abituriyent, style: Styles.resultStyles,),
+                const Text(Strings.abituriyent, style: Styles.textStyle,),
                 Text(
                   "BOTIROV JASUR / PAXTAKOR / 11-MAKTAB",
-                  style: Styles.resultStyles.copyWith(fontSize: 27)
+                  style: Styles.textStyle.copyWith(fontSize: 27)
                 ),
               ],
             ),
@@ -73,11 +73,11 @@ class ResultData extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(Strings.abituriyent, style: Styles.resultStyles,),
+                const Text(Strings.abituriyent, style: Styles.textStyle,),
                 Text(
                     "156,6",
                     textAlign: TextAlign.center,
-                    style: Styles.resultStyles.copyWith(fontSize: 70)
+                    style: Styles.textStyle.copyWith(fontSize: 70)
                 ),
               ],
             ),
@@ -88,10 +88,10 @@ class ResultData extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(Strings.abituriyent, style: Styles.resultStyles,),
+                const Text(Strings.abituriyent, style: Styles.textStyle,),
                 Text(
                     "BOTIROV JASUR / PAXTAKOR / 11-MAKTAB",
-                    style: Styles.resultStyles.copyWith(fontSize: 27)
+                    style: Styles.textStyle.copyWith(fontSize: 27)
                 ),
               ],
             ),
