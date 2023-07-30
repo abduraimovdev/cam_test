@@ -1,5 +1,6 @@
 import 'package:cam_test/core/constants/strings.dart';
 import 'package:cam_test/core/constants/styles.dart';
+import 'package:cam_test/screens/result_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -35,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  width: 350,
+                  width: size.width * .7,
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     borderRadius: const BorderRadius.all(
@@ -49,7 +50,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       const Text(
                         Strings.infoText,
                         style: Styles.textStyle,
-                        maxLines: 2,
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 20),
@@ -119,7 +119,15 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Colors.white,
                       ),
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (_) {
+                                return ResultScreen();
+                              },
+                            ),
+                          );
+                        },
                         icon: const Icon(
                           CupertinoIcons.camera_fill,
                           size: 40,
