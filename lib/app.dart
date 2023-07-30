@@ -1,4 +1,5 @@
 import 'package:cam_test/screens/home_screen.dart';
+import 'package:cam_test/screens/result_screen.dart';
 import 'package:flutter/material.dart';
 
 class CamApp extends StatelessWidget {
@@ -12,7 +13,7 @@ class CamApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
       // home: SplashScreen(),
-      home: const HomeScreen(),
+      home: const ResultScreen(),
     );
   }
 }
