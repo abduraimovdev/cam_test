@@ -13,7 +13,7 @@ class CamApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
       // home: SplashScreen(),
-      home: const ResultScreen(),
+      home: const HomeScreen(),
     );
   }
 }
