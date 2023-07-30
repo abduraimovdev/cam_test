@@ -103,6 +103,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     ElevatedButton(
+                      
                         onPressed: () {},
                         child: const Text(
                           "CHIQISH",
@@ -111,7 +112,29 @@ class _HomeScreenState extends State<HomeScreen> {
                               fontSize: 24,
                               fontWeight: FontWeight.w900),
                         ),),
-                    IconButton(onPressed: (){}, icon: const Icon(CupertinoIcons.camera_fill,size: 50,))
+                    IconButton(onPressed: (){}, icon: const Icon(CupertinoIcons.camera_fill,size: 50,shadows: [
+                      BoxShadow(color: Colors.white,
+                        blurRadius: 10,
+                        offset: Offset(5, 5),
+                        
+                      ),
+                      BoxShadow(color: Colors.white,
+                        blurRadius: 10,
+                        offset: Offset(-5, 5),
+
+                      ),
+                      BoxShadow(color: Colors.white,
+                        blurRadius: 10,
+                        offset: Offset(-5,- 5),
+
+                      ),
+                      BoxShadow(color: Colors.white,
+                        blurRadius: 10,
+                        offset: Offset(5,- 5),
+
+                      )
+                      
+                    ],))
 
                   ],
                 )

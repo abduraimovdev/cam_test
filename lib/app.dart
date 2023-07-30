@@ -7,7 +7,7 @@ class CamApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
-      // darkTheme: ThemeData.dark(),
+      darkTheme: ThemeData.dark(),
       theme: ThemeData.light(useMaterial3: true),
       themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
