@@ -12,30 +12,7 @@ class ResultScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Container(
-              width: MediaQuery.sizeOf(context).width * .8,
-              height: MediaQuery.sizeOf(context).height * .4,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(
-                  color: Colors.black,
-                ),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(child: Column()),
-                  Text("ABITURIYENT : "),
-                  Text(
-                    "BOTIROV JASUR / PAXTAKOR / 11-MAKTAB",
-                    style: TextStyle(
-                      fontSize: 27,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            ResultData(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -51,6 +28,75 @@ class ResultScreen extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class ResultData extends StatelessWidget {
+  const ResultData({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: MediaQuery.sizeOf(context).width * .8,
+      height: MediaQuery.sizeOf(context).height * .6,
+      padding: EdgeInsets.all(5),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+          color: Colors.black,
+        ),
+      ),
+      child: Column(
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("ABITURIYENT : "),
+                Text(
+                  "BOTIROV JASUR / PAXTAKOR / 11-MAKTAB",
+                  style: TextStyle(
+                    fontSize: 27,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("ABITURIYENT : "),
+                Text(
+                  "BOTIROV JASUR / PAXTAKOR / 11-MAKTAB",
+                  style: TextStyle(
+                    fontSize: 27,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("ABITURIYENT : "),
+                Text(
+                  "BOTIROV JASUR / PAXTAKOR / 11-MAKTAB",
+                  style: TextStyle(
+                    fontSize: 27,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
